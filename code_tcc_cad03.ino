@@ -210,10 +210,10 @@ void loop()
     analogWrite(P_MOTOR, 0);
    }
 //////////////////////////LIGAR AQUECIMENTO///////////////////////////////////
-   if ((holdingRegs[MODO] == 1) &&(holdingRegs[ST] != 0) && (F_ON == 1) && (F_OFF == 0) ){ //&& (holdingRegs[VOL_VAL] >= 350)
+   if ((holdingRegs[MODO] == 1) &&(holdingRegs[ST] != 0) && (F_ON == 1) && (F_OFF == 0) && (holdingRegs[VOL_VAL] >= 350)){ 
     controle(80,0.2);
    }
-   if ((holdingRegs[MODO] == 0) &&(holdingRegs[ST] != 0) && (F_ON == 1) && (F_OFF == 0)  ){ //&& (holdingRegs[VOL_VAL] >= 350
+   if ((holdingRegs[MODO] == 0) &&(holdingRegs[ST] != 0) && (F_ON == 1) && (F_OFF == 0) && (holdingRegs[VOL_VAL] >= 350)){ 
     controle(holdingRegs[KP],(holdingRegs[KI]/100));
    }
 ////////////////////////DESLIGAR/////////////////////////////////////
